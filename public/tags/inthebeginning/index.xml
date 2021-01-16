@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>inthebeginning on Signals in the Flow</title>
+    <link>http://example.org/tags/inthebeginning/</link>
+    <description>Recent content in inthebeginning on Signals in the Flow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 18 Jan 2021 00:00:00 +0800</lastBuildDate><atom:link href="http://example.org/tags/inthebeginning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sharing is Caring</title>
+      <link>http://example.org/posts/sharing-is-caring/</link>
+      <pubDate>Mon, 18 Jan 2021 00:00:00 +0800</pubDate>
+      
+      <guid>http://example.org/posts/sharing-is-caring/</guid>
+      <description>It&amp;rsquo;s time I give back. There are so many great resources around the web that I&amp;rsquo;ve benefited from which would not have been available had someone did not choose to share. I&amp;rsquo;m grateful for those that shared before me.
+Thank you.
+My turn.</description>
+    </item>
+    
+  </channel>
+</rss>
