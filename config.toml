@@ -1,4 +1,5 @@
 baseURL = "https://honuonhval.github.io/"
+publishDir = "docs"
 languageCode = "en-us"
 title = "Signals in the Flow"
 theme = "smol"
