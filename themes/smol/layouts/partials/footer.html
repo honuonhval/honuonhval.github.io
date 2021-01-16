@@ -1,0 +1,11 @@
+<footer>
+	<p>{{ now.Year }}
+		{{ if .Site.Copyright }}{{ .Site.Copyright }}
+		{{ else }}
+		Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+		{{ end }}
+	{{- range .Site.Menus.footer }}
+	<a href="{{ .URL }}"><b>{{ .Name }}</b></a>.
+        {{- end }}
+	</p>
+</footer>
