@@ -1,7 +1,7 @@
 +++
 title = "Sharing is Caring"
 publishDate = 2021-01-18T00:00:00+08:00
-lastmod = 2021-01-16T07:57:40+08:00
+lastmod = 2021-01-16T17:41:26+08:00
 tags = ["inthebeginning"]
 categories = ["blog"]
 draft = false
