@@ -6,7 +6,7 @@
     <description>Recent content on Signals in the Flow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 12 Feb 2021 00:58:11 +0800</lastBuildDate><atom:link href="https://honuonhval.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 01:02:10 +0800</lastBuildDate><atom:link href="https://honuonhval.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sharing is Caring</title>
       <link>https://honuonhval.github.io/posts/sharing-is-caring/</link>
@@ -31,7 +31,7 @@ Inspirations First thing I&amp;rsquo;ll share is someone that I&amp;rsquo;m real
     <item>
       <title>On Compiling Socat for Windows 10</title>
       <link>https://honuonhval.github.io/posts/on-compiling-socat/</link>
-      <pubDate>Fri, 12 Feb 2021 00:58:11 +0800</pubDate>
+      <pubDate>Fri, 12 Feb 2021 01:02:10 +0800</pubDate>
       
       <guid>https://honuonhval.github.io/posts/on-compiling-socat/</guid>
       <description>Cannot find socat on this thing Socat is so cool. It is a tool comparable to netcat but has some extra features that make it worth it to learn how to use. It is installed in Kali Linux by default. It is also only a pacman -S socat away in Arch Linux, but not readily available in Windows.

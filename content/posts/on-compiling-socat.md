@@ -1,7 +1,9 @@
 +++
 title = "On Compiling Socat for Windows 10"
 author = ["Jimmy Lee"]
-lastmod = 2021-02-12T00:58:11+08:00
+lastmod = 2021-02-12T01:02:10+08:00
+tags = ["tools", "win10"]
+categories = ["blog"]
 draft = false
 weight = 2003
 +++
