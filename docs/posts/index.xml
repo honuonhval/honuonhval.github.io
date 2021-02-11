@@ -6,7 +6,7 @@
     <description>Recent content in Posts on Signals in the Flow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Feb 2021 08:33:19 +0800</lastBuildDate><atom:link href="https://honuonhval.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 12 Feb 2021 00:58:11 +0800</lastBuildDate><atom:link href="https://honuonhval.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sharing is Caring</title>
       <link>https://honuonhval.github.io/posts/sharing-is-caring/</link>
@@ -26,6 +26,16 @@ My turn.</description>
       <guid>https://honuonhval.github.io/posts/starting-on-my-journey/</guid>
       <description>Taking the first step I&amp;rsquo;ve decided not to wait and just push myself to start on OSCP. I know it&amp;rsquo;ll be lot of work for the next 2 months but I&amp;rsquo;m excited.
 Inspirations First thing I&amp;rsquo;ll share is someone that I&amp;rsquo;m really thankful he is giving back to the community. The Cyber Mentor (YouTube channel) is the first person that gave a good foundational overview of the field. I didn&amp;rsquo;t know where to start nor even know what kind of things I could search for.</description>
+    </item>
+    
+    <item>
+      <title>On Compiling Socat for Windows 10</title>
+      <link>https://honuonhval.github.io/posts/on-compiling-socat/</link>
+      <pubDate>Fri, 12 Feb 2021 00:58:11 +0800</pubDate>
+      
+      <guid>https://honuonhval.github.io/posts/on-compiling-socat/</guid>
+      <description>Cannot find socat on this thing Socat is so cool. It is a tool comparable to netcat but has some extra features that make it worth it to learn how to use. It is installed in Kali Linux by default. It is also only a pacman -S socat away in Arch Linux, but not readily available in Windows.
+Actually, with quick search, I did find several binaries to download but I didn&amp;rsquo;t feel right downloading random .</description>
     </item>
     
   </channel>

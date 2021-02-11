@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<style type=text/css>body{font-family:monospace;}</style>
+	<title>On Compiling Socat for Windows 10</title>
+	
+	
+	<link rel="stylesheet" href="/css/style.css">
+	
+	
+</head>
+<body>
+	<header>
+	=========================<br>
+	== <a href="https://honuonhval.github.io/">Signals in the Flow</a> ==<br>
+	=========================
+	<div style="float: right;">&#34;Look, that&#39;s why there&#39;s rules, understand? So that you think before you break &#39;em&#34;</div><br>
+	<p>
+	<nav>
+			<a href="/"><b>Start</b></a>.
+			
+			
+			<a href="/posts/"><b>Posts</b></a>.
+			
+			<a href="/categories/"><b>Categories</b></a>.
+			
+			<a href="/tags/"><b>Tags</b></a>.
+			
+	</nav>
+	</p>
+	
+</header>
+
+	
+	<main>
+		<article>
+			<h1>On Compiling Socat for Windows 10</h1>
+			<b><time>12.02.2021 00:58</time></b>
+		       
+
+			<div>
+				<h2 id="cannot-find-socat-on-this-thing">Cannot find socat on this thing</h2>
+<p>Socat is so cool.  It is a tool comparable to netcat but has some extra features that make it worth it to learn how to use. It is installed in Kali Linux by default. It is also only a pacman -S socat away in Arch Linux, but not readily available in Windows.</p>
+<p>Actually, with quick search, I did find several binaries to download but I didn&rsquo;t feel right downloading random .exe file from the internet.</p>
+<ul>
+<li><a href="https://sourceforge.net/projects/unix-utils/files/socat/1.7.3.2/">https://sourceforge.net/projects/unix-utils/files/socat/1.7.3.2/</a></li>
+<li><a href="https://cybercircuits.co.nz/web/blog/socat-1-7-3-2-for-windows">https://cybercircuits.co.nz/web/blog/socat-1-7-3-2-for-windows</a></li>
+<li><a href="https://github.com/StudioEtrange/socat-windows">https://github.com/StudioEtrange/socat-windows</a></li>
+</ul>
+<p>First two links are actually maintained by the same person and third link was commited 6 years ago (socat has been updated since then).  Not that I didn&rsquo;t trust the blobs (healthy distrust?), I just wanted to compile it myself.</p>
+<h2 id="going-to-the-source">Going to the Source</h2>
+<ul>
+<li><a href="http://www.dest-unreach.org/socat/">http://www.dest-unreach.org/socat/</a></li>
+</ul>
+<p>README mentioned that it is possible to compile socat with Cygwin. I&rsquo;ve never used cygwin before (I&rsquo;ve only used linux and Mac ever since I started programming) but decided this will be the way.</p>
+<p>These two videos helped me get started on Cygwin:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=QonIPpKodCw">How to Install Cygwin on Windows 10</a></li>
+<li><a href="https://www.youtube.com/watch?v=VyIY8cjn9xY">How to Install Cygwin Packages</a></li>
+</ul>
+<p>Installed required Cygwin packages (gcc-{fortran,objc,objc++} may not be necessary):</p>
+<ul>
+<li><input checked="" disabled="" type="checkbox"> gcc-core - 10.2.0-1</li>
+<li><input disabled="" type="checkbox"> gcc-fortran - 10.2.0-1</li>
+<li><input checked="" disabled="" type="checkbox"> gcc-g++ - 10.2.0-1</li>
+<li><input disabled="" type="checkbox"> gcc-objc - 10.2.0-1</li>
+<li><input disabled="" type="checkbox"> gcc-objc++ - 10.2.0-1</li>
+<li><input checked="" disabled="" type="checkbox"> libkrb5-devel - 1.15.2-2</li>
+<li><input checked="" disabled="" type="checkbox"> libkrb5_3 - 1.15.2-2</li>
+<li><input checked="" disabled="" type="checkbox"> libreadline-devel - 7.0.3-3</li>
+<li><input checked="" disabled="" type="checkbox"> libssl-devel - 1.1.1f-1</li>
+<li><input checked="" disabled="" type="checkbox"> libwrap-devel - 7.6-26</li>
+<li><input checked="" disabled="" type="checkbox"> make - 4.3-1</li>
+<li><input checked="" disabled="" type="checkbox"> tcp_wrappers - 7.6-26</li>
+</ul>
+<p>Then in Cygwin64 Terminal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -xvzf socat-1.7.4.1.tar.gz
+cd socat-1.7.4.1
+./configure
+make
+make install
+</code></pre></div><p>Finally, socat can be found at `/usr/local/bin/socat.exe`.</p>
+<p>But wait&hellip; what if you want to bring it along to another machine?</p>
+<h2 id="bringing-it-with-you">Bringing it with you</h2>
+<p>Copy over `socat.exe` to another machine to test.
+It will complain about these files not being found:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">cygreadline7.dll
+cygcrypto-1.1.dll
+cygwin1.dll
+cygssl-1.1.dll
+cygncursesw-10.dll
+cygwrap-0.dll
+cygz.dll
+</code></pre></div><p>Easy fix is to copy these .dlls and socat.exe into a folder.
+Zipped up, it becomes 3.08MB and easy to move around. Tada~</p>
+<h2 id="hope-this-was-helpful">Hope this was helpful</h2>
+<p>I hope this walkthrough was helpful for anybody looking to have socat on Windows 10.  Going through this process not only gave me socat.exe that I can use (going through OSCP/PWK materials) but I&rsquo;ve learned how I can bring in some of linux tools I take for granted while using Windows.</p>
+<p>Even after having read all of this, if you just want to find the file to use - <a href="https://github.com/honuonhval/socat-win10">https://github.com/honuonhval/socat-win10</a> - I&rsquo;ve created a repository.</p>
+
+			</div>
+		</article>
+	</main>
+<aside>
+	<div>
+		<div>
+			<h3>LATEST POSTS</h3>
+		</div>
+		<div>
+			<ul>
+				
+				<li><a href="/posts/sharing-is-caring/">Sharing is Caring</a></li>
+				
+				<li><a href="/posts/starting-on-my-journey/">Starting on my journey (OSCP)</a></li>
+				
+				<li><a href="/posts/on-compiling-socat/">On Compiling Socat for Windows 10</a></li>
+				
+			</ul>
+		</div>
+	</div>
+</aside>
+
+
+	<footer>
+	<p>2021
+		
+		Except where otherwise noted, content on this site is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+		
+	<a href="https://github.com/honuonhval"><b>Github</b></a>.
+	<a href="https://twitter.com/@honuonhval"><b>Twitter</b></a>.
+	</p>
+</footer>
+
+</body>
+</html>
