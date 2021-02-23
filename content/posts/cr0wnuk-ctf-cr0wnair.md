@@ -1,9 +1,9 @@
 +++
 title = "cr0wn.uk CTF - web/Cr0wnAir"
-lastmod = 2021-02-23T11:52:47+08:00
+lastmod = 2021-02-23T12:01:53+08:00
 tags = ["ctf"]
 categories = ["blog"]
-draft = true
+draft = false
 weight = 2004
 +++
 
