@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>win10 on Signals in the Flow</title>
+    <link>https://honuonhval.github.io/tags/win10/</link>
+    <description>Recent content in win10 on Signals in the Flow</description>
+    <image>
+      <title>Signals in the Flow</title>
+      <url>https://honuonhval.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://honuonhval.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 12 Feb 2021 00:00:00 +0800</lastBuildDate><atom:link href="https://honuonhval.github.io/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>On Compiling Socat for Windows 10</title>
+      <link>https://honuonhval.github.io/posts/on-compiling-socat/</link>
+      <pubDate>Fri, 12 Feb 2021 00:00:00 +0800</pubDate>
+      
+      <guid>https://honuonhval.github.io/posts/on-compiling-socat/</guid>
+      <description>Cannot find socat on this thing Socat is so cool. It is a tool comparable to netcat but has some extra features that make it worth it to learn how to use. It is installed in Kali Linux by default. It is also only a pacman -S socat away in Arch Linux, but not readily available in Windows.
+Actually, with quick search, I did find several binaries to download but I didn&amp;rsquo;t feel right downloading random .</description>
+    </item>
+    
+  </channel>
+</rss>
